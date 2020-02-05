@@ -11,7 +11,7 @@ class ViewController: UIViewController {
         let inputImage = UIImage(named: "vernon")!
         inputImageView.image = inputImage
                 
-        let maskImage = UIImage(named: "vernonMask")!
+        let maskImage = UIImage(named: "mask")!
         maskImageView.image = maskImage
         
         let outputImage = OpenCVWrapper.cvInpaint(inputImage, maskImage: maskImage)

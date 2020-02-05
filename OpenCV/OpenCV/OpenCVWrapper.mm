@@ -22,9 +22,10 @@
     cv::resize(inputImageCV3C, inputImageCVResized, cv::Size(cols, rows));
     
     cv::Mat maskImageCV = [OpenCVWrapper cvMatFromUIImage:mask];
-    cv::Mat maskImageCV3C(rows, cols, CV_8UC1);
+    cv::Mat maskImageCV1C(rows, cols, CV_8UC1);
+    cv::cvtColor(maskImageCV, maskImageCV1C, cv::COLOR_RGBA2GRAY);
     cv::Mat maskImageCVResized(rows, cols, CV_8UC1);
-    cv::resize(maskImageCV3C, maskImageCVResized, cv::Size(cols, rows));
+    cv::resize(maskImageCV1C, maskImageCVResized, cv::Size(cols, rows));
     
     cv::inpaint(inputImageCVResized, maskImageCVResized, cvMat, 10, cv::INPAINT_TELEA);
     
