@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57315152240968BA00897A72 /* Pods_OpenCV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57315151240968BA00897A72 /* Pods_OpenCV.framework */; };
 		FE619A0D23DD1B130000347B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE619A0C23DD1B130000347B /* AppDelegate.swift */; };
 		FE619A0F23DD1B130000347B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE619A0E23DD1B130000347B /* SceneDelegate.swift */; };
 		FE619A1123DD1B130000347B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE619A1023DD1B130000347B /* ViewController.swift */; };
@@ -14,12 +15,15 @@
 		FE619A1723DD1B130000347B /* OpenCV.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE619A1523DD1B130000347B /* OpenCV.xcdatamodeld */; };
 		FE619A1923DD1B140000347B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE619A1823DD1B140000347B /* Assets.xcassets */; };
 		FE619A1C23DD1B140000347B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE619A1A23DD1B140000347B /* LaunchScreen.storyboard */; };
-		FE619A2523DD1BD20000347B /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE619A2423DD1BD20000347B /* opencv2.framework */; };
 		FE619A3023DD1DA30000347B /* OpenCVWrapper.mm in Sources */ = {isa = PBXBuildFile; fileRef = FE619A2F23DD1DA30000347B /* OpenCVWrapper.mm */; };
 		FE88CEF023DFDF41004DCBF3 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE88CEEF23DFDF41004DCBF3 /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0017E0D9B6ECD205E9FB40BC /* Pods-OpenCV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV.debug.xcconfig"; path = "Target Support Files/Pods-OpenCV/Pods-OpenCV.debug.xcconfig"; sourceTree = "<group>"; };
+		4871BA3C10E2037FD2B743C1 /* Pods-OpenCV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OpenCV.release.xcconfig"; path = "Target Support Files/Pods-OpenCV/Pods-OpenCV.release.xcconfig"; sourceTree = "<group>"; };
+		57315151240968BA00897A72 /* Pods_OpenCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_OpenCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B86E47EC07F5C76D5FCA9D8 /* Pods_OpenCV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OpenCV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE619A0923DD1B130000347B /* OpenCV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE619A0C23DD1B130000347B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE619A0E23DD1B130000347B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,19 +46,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE619A2523DD1BD20000347B /* opencv2.framework in Frameworks */,
+				57315152240968BA00897A72 /* Pods_OpenCV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49746E2F30E8831D39A4FB89 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0017E0D9B6ECD205E9FB40BC /* Pods-OpenCV.debug.xcconfig */,
+				4871BA3C10E2037FD2B743C1 /* Pods-OpenCV.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FE619A0023DD1B130000347B = {
 			isa = PBXGroup;
 			children = (
 				FE619A0B23DD1B130000347B /* OpenCV */,
 				FE619A0A23DD1B130000347B /* Products */,
 				FE619A2323DD1BD20000347B /* Frameworks */,
+				49746E2F30E8831D39A4FB89 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,7 +103,9 @@
 		FE619A2323DD1BD20000347B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				57315151240968BA00897A72 /* Pods_OpenCV.framework */,
 				FE619A2423DD1BD20000347B /* opencv2.framework */,
+				7B86E47EC07F5C76D5FCA9D8 /* Pods_OpenCV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE619A2023DD1B140000347B /* Build configuration list for PBXNativeTarget "OpenCV" */;
 			buildPhases = (
+				8BD6ECCFAF7C4EA08AFD858F /* [CP] Check Pods Manifest.lock */,
 				FE619A0523DD1B130000347B /* Sources */,
 				FE619A0623DD1B130000347B /* Frameworks */,
 				FE619A0723DD1B130000347B /* Resources */,
@@ -160,6 +177,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8BD6ECCFAF7C4EA08AFD858F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OpenCV-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE619A0523DD1B130000347B /* Sources */ = {
@@ -313,11 +355,11 @@
 		};
 		FE619A2123DD1B140000347B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0017E0D9B6ECD205E9FB40BC /* Pods-OpenCV.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(PROJECT_DIR)/";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/OpenCV/PrefixHeader.pch";
 				INFOPLIST_FILE = OpenCV/Info.plist;
@@ -336,6 +378,7 @@
 		};
 		FE619A2223DD1B140000347B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4871BA3C10E2037FD2B743C1 /* Pods-OpenCV.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
